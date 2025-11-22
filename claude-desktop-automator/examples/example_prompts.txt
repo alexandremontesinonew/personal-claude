@@ -1,0 +1,13 @@
+# Example Prompts for Claude Desktop Automator
+# Lines starting with # are ignored
+# One prompt per line
+
+Explain what is object-oriented programming in simple terms
+
+What are the SOLID principles in software development?
+
+Can you provide a Python example of the decorator pattern?
+
+How does garbage collection work in Python?
+
+What's the difference between deep copy and shallow copy?

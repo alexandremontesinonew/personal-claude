@@ -1,0 +1,19 @@
+# Include documentation
+include README.md
+include LICENSE
+include CHANGELOG.md
+include QUICKSTART.md
+
+# Include configuration files
+recursive-include config *.yaml
+recursive-include config *.txt
+
+# Include examples
+recursive-include examples *.py
+recursive-include examples *.txt
+
+# Exclude compiled files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude __pycache__
+global-exclude .DS_Store

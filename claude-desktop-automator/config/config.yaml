@@ -1,0 +1,73 @@
+claude_desktop:
+  # Window title to search for (partial match)
+  window_title: "Claude"
+  # Alternative window class name for more reliable detection
+  window_class: null
+  # Delay between keystrokes in milliseconds (humanized typing)
+  input_delay_ms: 50
+  # Maximum time to wait for a response in seconds
+  response_timeout_sec: 120
+  # Time to wait after sending before checking response
+  initial_wait_sec: 2
+
+automation:
+  # Path to file containing base instructions/system prompt
+  base_instructions: "config/base_instructions.txt"
+  # Maximum number of retries for failed operations
+  max_retries: 3
+  # Delay between retries in seconds
+  retry_delay_sec: 5
+  # Randomize delays to appear more human-like
+  humanize_delays: true
+  # Variance percentage for humanized delays (e.g., 0.2 = ±20%)
+  delay_variance: 0.2
+
+detection:
+  # Keywords that indicate rate limit has been reached
+  limit_keywords:
+    - "limit"
+    - "aguarde"
+    - "rate limit"
+    - "too many"
+    - "try again later"
+    - "maximum number"
+  # How often to check for limit indicators (seconds)
+  check_interval_sec: 2
+  # Use OCR for detection (more reliable but slower)
+  use_ocr: true
+  # OCR language
+  ocr_lang: "eng+por"
+  # Screenshot region for OCR (null for full window)
+  ocr_region: null
+
+recovery:
+  # Wait time after starting new chat (seconds)
+  new_chat_delay_sec: 3
+  # Maximum number of recovery attempts
+  max_recovery_attempts: 5
+  # Delay between recovery attempts (seconds)
+  recovery_retry_delay_sec: 10
+
+logging:
+  # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  level: "INFO"
+  # Log file path
+  file: "logs/automator.log"
+  # Maximum log file size in MB
+  max_file_size_mb: 10
+  # Number of backup log files to keep
+  backup_count: 5
+  # Also log to console
+  console: true
+  # Save screenshots on errors
+  screenshot_on_error: true
+  # Screenshot directory
+  screenshot_dir: "logs/screenshots"
+
+session:
+  # Auto-save session context
+  auto_save: true
+  # Session save interval in seconds
+  save_interval_sec: 60
+  # Session save path
+  save_path: "logs/sessions"
